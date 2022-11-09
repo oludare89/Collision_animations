@@ -16,4 +16,10 @@ class Explosion {
         this.image.src = "images/boom.png";
         this.frame = 0;
     }
+    update(){
+        this.frame++;
+    }
+    draw(){
+        ctx.drawImage(this.image, this.spriteWidth * this.frame, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.spriteWidth, this.spriteHeight);
+    }
 }
